@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pal Details</title>
+
+    <link rel="stylesheet" href="/src/output.css">
+
+</head>
+
+<body class="antialiased bg-vanilla">
+    <main class="mx-auto max-w-7xl justify-center">
+        <section>
+            <div class="mt-10 text-center flex items-center justify-center py-4">
+                <div class="flex items-center gap-4">
+                    <h1 class="font-bold text-3xl text-gray-800" id="palname"></h1>
+                    <h2 class="text-3xl font-semibold text-gray-500" id="palID">#432</h2>
+                </div>
+            </div>
+
+            <div class="flex mx-auto items-center justify-center sm:mt-20 mt-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 -gap-20">
+                    <div class="flex flex-col h-96 w-96 items-center justify-center mx-auto">
+                        <img src="" alt="" id="palImage" class="object-cover h-96 w-96 rounded-full">
+                    </div>
+
+                    <div class="flex flex-col mx-auto justify-center">
+                        <div class="">
+                            <p id="palDesc" class="sm:px-2 p-4 px-4 text-xl"></p>
+                        </div>
+
+                        <div class="">
+                            <h1 class="sm:px-2 p-4 px-4 text-xl">Sustanabilities:</h1>
+                            <div class="grid sm:grid-cols-3 grid-cols-2 gap-2" id="susContainer">
+                                <div class="flex flex-col">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/details.js"></script>
+</body>
+
+</html>
