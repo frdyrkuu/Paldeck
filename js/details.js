@@ -5,7 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const palImage = document.getElementById('palImage');
     const palDesc = document.getElementById('palDesc');
 
-    const sustainability = document.getElementById('susContainer')
+    const sustainability = document.getElementById('susContainer');
+    const typeContent = document.getElementById('typeContent');
+
+    const melee = document.getElementById('melee');
+    const range = document.getElementById('range');
+    const defense = document.getElementById('defense');
+    const food = document.getElementById('food');
+    const hp = document.getElementById('hp');
+    const stamina = document.getElementById('stamina');
 
     displayDetails();
 
@@ -15,8 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = params.get('name');
         const id = params.get('id');
 
+        const palID = document.getElementById('palID');
         const palname = document.getElementById('palname');
         palname.textContent = name;
+        palID.textContent = `#${id}`;
 
         fetch(url)
             .then(response => {
@@ -32,18 +42,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (selectedPal) {
                     console.log(selectedPal);
-                    palImage.src = `${baseUrl}/${selectedPal.image}`
+                    palImage.src = `${baseUrl}/${selectedPal.image}`;
                     palDesc.textContent = selectedPal.description;
 
+
+                    // STATS
+                    melee.textContent = selectedPal.stats.attack.melee;
+                    range.textContent = selectedPal.stats.attack.ranged;
+                    food.textContent = selectedPal.stats.food;
+                    hp.textContent = selectedPal.stats.hp;
+                    stamina.textContent = selectedPal.stats.stamina;
 
                     const suitabilityData = selectedPal.suitability;
 
                     if (Array.isArray(suitabilityData) && suitabilityData.length > 0) {
                         const content = suitabilityData.map((item, index) => {
+                            const cleanedType = item.type.replace(/_/g, ' '); // Replace underscores with spaces
                             return `
                               <div class="flex flex-row flex-wrap items-center">
                                 <img src="${baseUrl}${item.image}" alt="sustainability" id="sus${index}">
-                                <h1 class="font-semibold capitalize">${item.type}</h1>
+                                <h1 class="font-semibold capitalize">${cleanedType}</h1>
                               </div>`;
                         }).join('\n');
 
@@ -51,6 +69,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     } else {
                         console.error(`Pal with id ${desiredId} has no suitability data.`);
                     }
+
+                    // TYPE
+                    const typeData = selectedPal.types;
+
+                    if (Array.isArray(typeData) && typeData.length > 0) {
+                        const contentType = typeData.map((item, index) => {
+                            return `
+                              <div class="flex flex-wrap items-center gap-1">
+                                <img src="${baseUrl}${item.image}" alt="sustainability" id="sus${index}">
+                                <h1 class="font-[700] capitalize">${item.name}</h1>
+                              </div>`;
+                        }).join('\n');
+
+                        typeContent.innerHTML = contentType;
+
+
+
+                    } else {
+                        console.error(`Pal with id ${desiredId} has no type data.`);
+                    }
+
 
                 } else {
                     console.error('Pal not found with the given ID.');

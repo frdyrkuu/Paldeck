@@ -8,10 +8,23 @@
 
     <link rel="stylesheet" href="/src/output.css">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vibrant-browser@1.0.0/dist/Vibrant.min.js"></script>
 
 </head>
 
 <body class="antialiased bg-vanilla font-['Poppins']">
+    <header class="px-4 p-1 md:rounded-b-[5rem] rounded-b-[3rem] shadow bg-orange-400 sticky top-0 z-50 ">
+        <section class="max-w-7xl mx-auto p-2 flex justify-between items-center">
+            <div class="hover:scale-105 transition duration-100 ease-out mx-auto">
+                <a href="/main/main.html" class="flex mx-auto justify-center items-center"><img id="logo"
+                        src="/img/pal_sphere.png" alt="icon" class="w-20 h-20">
+                    <h1 class="text-4xl font-[900] text-white"><span class="text-vanilla">Pal</span>dex.app</h1>
+                </a>
+            </div>
+        </section>
+    </header>
+
     <main class="max-w-7xl mx-auto items-center justify-center sm:px-10 px-2">
         <div class="w-full mt-10">
             <form id="searchForm">
@@ -25,8 +38,8 @@
                         </svg>
                     </div>
                     <input type="number" id="search"
-                        class="placeholder:font-semibold block w-full p-4 ps-10 text-sm text-gray-900 shadow-lg shadow-slate-200/60 rounded-lg bg-gray-50 outline-none"
-                        placeholder="Search your Pal" required />
+                        class="placeholder:font-semibold block w-full p-4 ps-10 text-sm text-gray-900 shadow-lg shadow-slate-200/60 rounded-lg bg-gray-50 outline-none placeholder:truncate"
+                        placeholder="Search your Pal (Under development)" required />
                     <button type="submit"
                         class="text-white ml-2 bg-orange-500 hover:bg-orange-800 focus:ring-2 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
                     <button type="button"
@@ -36,11 +49,10 @@
             </form>
         </div>
 
-        <div class="mx-auto mt-16">
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="palCard">
+        <div class="mx-auto mt-16 headline">
+            <div class="reveal-items grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="palCard">
 
                 <!-- content -->
-                
                 <!-- end content -->
 
             </div>
@@ -48,7 +60,7 @@
 
     </main>
     <script src="/js/paldex.js"></script>
-    <!-- <script src="/js/loader.js"></script> -->
+    <script src="/js/scroll-reveal.js"></script>
 </body>
 
 </html>

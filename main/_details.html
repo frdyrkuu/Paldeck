@@ -8,31 +8,49 @@
 
     <link rel="stylesheet" href="/src/output.css">
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.0.0/Vibrant.min.js"></script>
 </head>
 
 <body class="antialiased bg-vanilla">
-    <main class="mx-auto max-w-7xl justify-center">
-        <section>
-            <div class="mt-10 text-center flex items-center justify-center py-4">
-                <div class="flex items-center gap-4">
-                    <h1 class="font-bold text-3xl text-gray-800" id="palname"></h1>
-                    <h2 class="text-3xl font-semibold text-gray-500" id="palID">#432</h2>
+    <header class="px-4 p-1 md:rounded-b-[5rem] rounded-b-[3rem] shadow">
+        <section class="max-w-7xl mx-auto p-2 flex justify-between items-center">
+            <div class="hover:scale-105 transition duration-100 ease-out mx-auto">
+                <a href="/main/main.html" class="flex mx-auto justify-center items-center"><img id="logo"
+                        src="/img/pal_sphere.png" alt="icon" class="w-20 h-20">
+                    <h1 class="text-4xl font-[900] text-white"><span class="text-vanilla">Pal</span>dex.app</h1>
+                </a>
+            </div>
+        </section>
+    </header>
+
+    <main class="mx-auto max-w-7xl justify-center py-10">
+        <section class="">
+            <div class="text-center flex items-center justify-center py-4">
+                <div class="flex items-center  justify-center mx-auto gap-4 reveal-left mb-4">
+                    <div>
+                        <h1 class="font-[900] text-6xl text-gray-800" id="palname"></h1>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-semibold text-gray-500" id="palID"></h2>
+                    </div>
                 </div>
             </div>
 
-            <div class="flex mx-auto items-center justify-center sm:mt-20 mt-10">
+            <div class="flex mx-auto items-center justify-center">
                 <div class="grid grid-cols-1 md:grid-cols-2 -gap-20">
-                    <div class="flex flex-col h-96 w-96 items-center justify-center mx-auto">
-                        <img src="" alt="" id="palImage" class="object-cover h-96 w-96 rounded-full">
+                    <div class="flex flex-col items-center justify-center mx-auto reveal-left">
+                        <img src="" alt="" id="palImage" class="object-cover sm:h-96 sm:w-96 h-72 w-72 rounded-full"
+                            crossorigin>
                     </div>
 
-                    <div class="flex flex-col mx-auto justify-center">
+                    <div class="flex flex-col mx-auto justify-center reveal-bottom">
                         <div class="">
                             <p id="palDesc" class="sm:px-2 p-4 px-4 text-xl"></p>
                         </div>
 
-                        <div class="">
-                            <h1 class="sm:px-2 p-4 px-4 text-xl">Sustanabilities:</h1>
+                        <div class="px-4">
+                            <h1 class="sm:px-2 p-4 px-4 text-xl">Sustainabilities:</h1>
                             <div class="grid sm:grid-cols-3 grid-cols-2 gap-2" id="susContainer">
                                 <div class="flex flex-col">
 
@@ -42,10 +60,220 @@
                     </div>
                 </div>
             </div>
+
+
+            <!-- STATS -->
+            <div class="grid lg:grid-cols-2 grid-cols-1 mx-auto">
+                <div
+                    class="flex flex-col px-4 items-center justify-center mt-10 text-white hover:-translate-y-2 duration-100 transition ease-out">
+                    <div
+                        class="stats w-full h-96 rounded-xl px-4 p-3 hover:shadow-xl shadow duration-500 transition ease-out reveal-bottom-reset">
+                        <h1 class="px-4 text-2xl font-bold">Stats</h1>
+
+                        <div class="px-4 mt-3">
+                            <div id="typeContent" class="flex gap-4"></div>
+                        </div>
+
+                        <!-- LIST STATS -->
+
+                        <!-- ATTACK -->
+                        <div class="px-4 mt-3 flex flex-row items-center gap-2">
+                            <h1 class="font-[800] text-xl" title="Melee">Attack</h1>
+                        </div>
+                        <div class="grid grid-cols-2 content-between w-1/2">
+                            <div class="px-4 mt-3 flex flex-row items-center gap-2">
+                                <svg fill="#ffffff" width="30px" height="30px" viewBox="0 0 256 256" id="Flat"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M221.65723,34.34326A8.00246,8.00246,0,0,0,216,32h-.02539l-63.79883.20117A8.00073,8.00073,0,0,0,146.0332,35.106L75.637,120.32275,67.31348,111.999A16.02162,16.02162,0,0,0,44.68555,112L32.001,124.68555A15.99888,15.99888,0,0,0,32,147.31348l20.88672,20.88769L22.94531,198.14258a16.01777,16.01777,0,0,0,.001,22.62695l12.28418,12.28418a16.00007,16.00007,0,0,0,22.62793,0L87.79883,203.1123,108.68652,224.001A16.02251,16.02251,0,0,0,131.31445,224L143.999,211.31445A15.99888,15.99888,0,0,0,144,188.68652l-8.32324-8.32324,85.21679-70.39648a8.00125,8.00125,0,0,0,2.90528-6.14258L224,40.02539A8.001,8.001,0,0,0,221.65723,34.34326Zm-13.84668,65.67822-83.49829,68.97706L111.314,156l54.34327-54.34277a8.00053,8.00053,0,0,0-11.31446-11.31446L100,144.686,87.00195,131.6875,155.97852,48.189l51.99609-.16357Z" />
+                                </svg>
+                                <h1 class="font-[900] text-2xl" title="Melee" id="melee">60</h1>
+                            </div>
+
+                            <div class="px-4 mt-3 flex flex-row items-center gap-2">
+                                <svg fill="#ffffff" height="30px" width="30px" version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 389.655 389.655" xml:space="preserve">
+                                    <g>
+                                        <g id="Layer_1_98_">
+                                            <path d="M388.515,252.217c-4.912-25.445-25.027-42.371-39.73-52.889c-17.416-12.459-35.137-24.754-52.676-36.547
+			c-11.732-7.889-23.713-15.848-36.414-24.189l50.488-50.486l7.988,7.988c1.193,1.193,2.951,1.623,4.563,1.119
+			c0.709-0.225,1.336-0.611,1.844-1.119c0.643-0.643,1.092-1.477,1.258-2.406l5.352-29.979c0.26-1.461-0.209-2.951-1.256-4
+			c-1.047-1.047-2.541-1.518-4-1.258l-29.98,5.354c-1.66,0.295-3.02,1.492-3.523,3.102c-0.506,1.609-0.076,3.367,1.117,4.561
+			l7.99,7.99l-50.951,50.949c-7.57-11.686-13.959-21.455-19.895-30.426c-12.785-19.33-26.641-39.605-41.182-60.262
+			C176.094,20.66,161.779,8.754,145.752,3.315c-27.633-9.373-54.238,3.154-74.33,15.115c-6.461,3.846-12.861,7.951-19.053,11.922
+			C36.137,40.766,20.803,50.6,3.277,57.028c-2.271,0.834-3.621,3.174-3.201,5.561c0.42,2.385,2.484,4.125,4.906,4.133
+			c0.021,0,0.045,0,0.066,0l154.611,154.611l-28.084,28.084l-10.324,1.512c-0.631,0.092-1.23,0.338-1.742,0.719l-24.625,18.217
+			c-1.377,1.014-1.916,2.809-1.344,4.414c0.572,1.607,2.129,2.65,3.832,2.568l16.191-0.771l-0.771,16.191
+			c-0.08,1.703,0.963,3.26,2.568,3.832c1.424,0.508,2.994,0.137,4.039-0.908c0.133-0.133,0.26-0.279,0.375-0.436l18.219-24.623
+			c0.379-0.514,0.625-1.113,0.717-1.742l1.514-10.324l28.084-28.084l154.635,154.635v0.004c0.004,2.424,1.746,4.496,4.133,4.918
+			c1.65,0.291,3.281-0.266,4.406-1.391c0.5-0.5,0.9-1.115,1.158-1.816c6.637-18.143,17.346-34.807,27.703-50.92
+			c2.916-4.537,5.932-9.227,8.826-13.902C381.503,301.584,393.448,277.769,388.515,252.217z M164.608,216.381L14.515,66.287
+			c19.367-1.744,37.547-8.629,55.207-15.33c8.58-3.258,17.453-6.627,26.191-9.273c13.332-4.037,27.176-6.746,38.113,0.719
+			c7.273,4.961,12.355,12.648,16.912,20.16c0.033,0.064,0.068,0.129,0.104,0.191c1.521,2.643,3.063,5.275,4.604,7.906l0.682,1.164
+			c16.434,28.098,33.938,56.723,53.506,87.516c0.367,0.576,0.869,1.506,1.398,2.488c0.895,1.654,1.848,3.41,2.92,5.012
+			L164.608,216.381z M351.973,274.51c-0.738,11.27-4.838,22.488-8.803,33.336l-0.309,0.848c-1.293,3.539-2.633,7.088-3.979,10.652
+			c-6.766,17.91-13.727,36.357-15.488,55.824L173.257,225.029l50.348-50.348l6.934,4.469c7.336,4.729,14.82,9.479,22.057,14.072
+			l1.35,0.855c12.197,7.744,24.387,15.227,35.742,22.16c10.248,6.256,20.73,12.547,31.156,18.697l2.078,1.221
+			c6.363,3.736,12.377,7.264,17.545,11.824C348.856,255.594,352.62,264.275,351.973,274.51z" />
+                                        </g>
+                                    </g>
+                                </svg>
+                                <h1 class="font-[900] text-2xl" title="Range" id="range">60</h1>
+                            </div>
+                        </div>
+                        <!-- END ATTACK -->
+
+                        <!-- DEFENSE -->
+                        <div class="grid md:grid-cols-4 grid-cols-2 gap-2">
+                            <div class="px-4 mt-3 flex flex-col gap-2">
+                                <div class="flex-col gap-2">
+                                    <div>
+                                        <h1 class="font-[800] text-xl">Defense</h1>
+                                    </div>
+                                    <div class="flex flex-row mt-3 gap-2">
+                                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.302 21.6149C11.5234 21.744 11.6341 21.8086 11.7903 21.8421C11.9116 21.8681 12.0884 21.8681 12.2097 21.8421C12.3659 21.8086 12.4766 21.744 12.698 21.6149C14.646 20.4784 20 16.9084 20 12V6.6C20 6.04207 20 5.7631 19.8926 5.55048C19.7974 5.36198 19.6487 5.21152 19.4613 5.11409C19.25 5.00419 18.9663 5.00084 18.3988 4.99413C15.4272 4.95899 13.7136 4.71361 12 3C10.2864 4.71361 8.57279 4.95899 5.6012 4.99413C5.03373 5.00084 4.74999 5.00419 4.53865 5.11409C4.35129 5.21152 4.20259 5.36198 4.10739 5.55048C4 5.7631 4 6.04207 4 6.6V12C4 16.9084 9.35396 20.4784 11.302 21.6149Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <h1 class="font-[900] text-2xl" title="Defense" id="defense">60</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-4 mt-3 flex flex-col gap-2">
+                                <div class="flex-col gap-2">
+                                    <div>
+                                        <h1 class="font-[800] text-xl">Food</h1>
+                                    </div>
+                                    <div class="flex flex-row mt-3 gap-2">
+                                        <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+                                            xml:space="preserve" width="30px" height="30px" fill="#ffffff">
+                                            <style type="text/css">
+                                                .st0 {
+                                                    fill: none;
+                                                    stroke: #ffffff;
+                                                    stroke-width: 2;
+                                                    stroke-linecap: round;
+                                                    stroke-linejoin: round;
+                                                    stroke-miterlimit: 10;
+                                                }
+                                            </style>
+                                            <path d="M22.3,8.1c-1.8-0.3-3.5,0.1-5,1.1c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1-0.5-0.2-1-0.3-1.4c0.5,0.1,1,0.2,1.5,0.2
+	c0.5,0,0.9-0.1,1.4-0.2c0,0,0,0,0,0c2.1-0.8,3-3.4,3-3.7c0.1-0.4,0-0.9-0.4-1.1c-0.3-0.2-2.6-1.6-4.7-0.7c-1.2,0.4-2,1.4-2.4,2.3
+	c-0.6-0.8-1.2-1.5-2-2.1l-0.4-0.3c-0.4-0.3-1.1-0.2-1.4,0.2c-0.3,0.4-0.2,1.1,0.2,1.4l0.4,0.3c1.7,1.2,2.8,3.1,3.1,5.1
+	c0,0-0.1,0-0.1-0.1c-1.5-1-3.3-1.3-5-1.1c-4.3,0.7-7.3,5.1-6.6,9.8C3.5,21.4,6,26.5,9,28.8c1,0.7,2,1.1,3,1.1c0.2,0,0.4,0,0.6,0
+	c0.6-0.1,1.3-0.4,1.8-0.8c0.9-0.7,2.3-0.7,3.2,0c0.6,0.4,1.2,0.7,1.8,0.8c1.2,0.2,2.4-0.2,3.6-1.1c3-2.2,5.5-7.4,5.9-10.9
+	C29.5,13.2,26.5,8.8,22.3,8.1z" />
+                                        </svg>
+                                        <h1 class="font-[900] text-2xl" title="Defense" id="food">60</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-4 mt-3 flex flex-col gap-2">
+                                <div class="flex-col gap-2">
+                                    <div>
+                                        <h1 class="font-[800] text-xl">HP</h1>
+                                    </div>
+                                    <div class="flex flex-row mt-3 gap-2">
+                                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="#ffffff"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M8.96173 19.3707C6.01943 16.9714 2 13.0079 2 9.26044C2 3.3495 7.50016 0.662637 12 5.49877C16.4998 0.662637 22 3.34931 22 9.2604C22 13.008 17.9806 16.9714 15.0383 19.3707C13.7063 20.4569 13.0403 21 12 21C10.9597 21 10.2937 20.4569 8.96173 19.3707ZM10.0932 10.7463C10.1827 10.6184 10.2571 10.5122 10.3233 10.4213C10.3793 10.5188 10.4418 10.6324 10.517 10.7692L12.2273 13.8787C12.3933 14.1808 12.5562 14.4771 12.7197 14.6921C12.8947 14.9221 13.2023 15.2374 13.6954 15.2466C14.1884 15.2559 14.5077 14.9524 14.6912 14.7291C14.8627 14.5204 15.0365 14.2305 15.2138 13.9349L15.2692 13.8425C15.49 13.4745 15.629 13.2444 15.752 13.0782C15.8654 12.9251 15.9309 12.8751 15.9798 12.8475C16.0286 12.8198 16.1052 12.7894 16.2948 12.7709C16.5006 12.7509 16.7694 12.7501 17.1986 12.7501H18C18.4142 12.7501 18.75 12.4143 18.75 12.0001C18.75 11.5859 18.4142 11.2501 18 11.2501L17.1662 11.2501C16.7791 11.2501 16.4367 11.2501 16.1497 11.278C15.8385 11.3082 15.5357 11.3751 15.2407 11.5422C14.9457 11.7092 14.7325 11.9344 14.5465 12.1857C14.3749 12.4174 14.1988 12.711 13.9996 13.043L13.9521 13.1222C13.8654 13.2668 13.793 13.3872 13.7284 13.4906C13.6676 13.3849 13.5999 13.2618 13.5186 13.1141L11.8092 10.006C11.6551 9.7256 11.5015 9.44626 11.3458 9.24147C11.1756 9.01775 10.8839 8.72194 10.4164 8.6967C9.94887 8.67146 9.62698 8.93414 9.43373 9.13823C9.25683 9.32506 9.0741 9.58625 8.89069 9.84841L8.58131 10.2904C8.35416 10.6149 8.21175 10.8171 8.08848 10.9629C7.975 11.0971 7.91193 11.1411 7.86538 11.1653C7.81882 11.1896 7.74663 11.216 7.57159 11.232C7.38144 11.2494 7.13413 11.2501 6.73803 11.2501H6C5.58579 11.2501 5.25 11.5859 5.25 12.0001C5.25 12.4143 5.58579 12.7501 6 12.7501L6.76812 12.7501C7.12509 12.7501 7.44153 12.7501 7.70801 12.7258C7.99707 12.6994 8.27904 12.6411 8.55809 12.4958C8.83714 12.3505 9.04661 12.153 9.234 11.9313C9.40676 11.7269 9.58821 11.4677 9.79291 11.1752L10.0932 10.7463Z"
+                                                fill="#ffffff" />
+                                        </svg>
+                                        <h1 class="font-[900] text-2xl" title="HP" id="hp">60</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="px-4 mt-3 flex flex-col gap-2">
+                                <div class="flex-col gap-2">
+                                    <div>
+                                        <h1 class="font-[800] text-xl">Stamina</h1>
+                                    </div>
+                                    <div class="flex flex-row mt-3 gap-2">
+                                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="#ffffff"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.31993 13.28H12.4099V20.48C12.4099 21.54 13.7299 22.04 14.4299 21.24L21.9999 12.64C22.6599 11.89 22.1299 10.72 21.1299 10.72H18.0399V3.51997C18.0399 2.45997 16.7199 1.95997 16.0199 2.75997L8.44994 11.36C7.79994 12.11 8.32993 13.28 9.31993 13.28Z"
+                                                stroke="#ffffff" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M8.5 4H1.5" stroke="#ffffff" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M7.5 20H1.5" stroke="#ffffff" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="0.4" d="M4.5 12H1.5" stroke="#ffffff" stroke-width="1.5"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <h1 class="font-[900] text-2xl" title="Stamina" id="stamina">60</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END DEFENSE -->
+                    </div>
+                </div>
+
+
+                <!-- Skills -->
+                <div
+                    class="flex flex-col px-4 items-center justify-center mt-10 hover:-translate-y-2 duration-100 transition ease-out">
+                    <div
+                        class="bg-gray-400 w-full h-96 rounded-xl px-4 p-3 hover:shadow-xl shadow duration-500 transition ease-out reveal-bottom-reset">
+                        <h1 class="px-4 text-2xl font-bold text-white">Skills</h1>
+                        <div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+
+    <footer class="stats px-4 p-1 md:rounded-t-[5rem] rounded-t-[3rem] shadow">
+        <section class="max-w-7xl p-4 px-4 md:flex flex-row mx-auto items-center md:justify-between">
+            <div class="hover:scale-105 transition duration-100 ease-out flex md:justify-between justify-center">
+                <a href="/main/main.html" class="flex items-center space-x-2">
+                    <img id="logo" src="/img/pal_sphere.png" alt="icon" class="w-12 h-12 rounded-full">
+                    <h1 class="text-4xl font-[900] text-white"><span class="text-vanilla">Pal</span>dex.app</h1>
+                </a>
+            </div>
+
+            <div class="flex mt-4 space-x-4 font-bold md:justify-between justify-center">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="text-vanilla hover:text-gray-300">About</a></li>
+                    </ul>
+                </nav>
+
+                <nav>
+                    <ul>
+                        <li><a href="/" class="text-vanilla hover:text-gray-300">Home</a></li>
+                    </ul>
+                </nav>
+
+                <nav>
+                    <ul>
+                        <li><a href="https://fredericksocorin.netlify.app/" target="_blank" class="text-vanilla hover:text-gray-300">Hire Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </footer>
+
+
     <script src="/js/details.js"></script>
+    <script src="/js/scroll-reveal.js"></script>
+    <script src="/js/vibrant.js"></script>
 </body>
 
 </html>
