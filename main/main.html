@@ -27,7 +27,7 @@
 
     <main class="max-w-7xl mx-auto items-center justify-center sm:px-10 px-2">
         <div class="w-full mt-10">
-            <form id="searchForm">
+            <form id="searchForm" action="">
                 <label for="search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                 <div class="relative flex items-center">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -37,16 +37,18 @@
                                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
                     </div>
-                    <input type="number" id="search"
+                    <input type="number" id="search" name="id"
                         class="placeholder:font-semibold block w-full p-4 ps-10 text-sm text-gray-900 shadow-lg shadow-slate-200/60 rounded-lg bg-gray-50 outline-none placeholder:truncate"
-                        placeholder="Search your Pal (Under development)" required />
-                    <button type="submit"
-                        class="text-white ml-2 bg-orange-500 hover:bg-orange-800 focus:ring-2 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+                        placeholder="Enter Pal #ID" required />
                     <button type="button"
-                        class="text-white ml-2 bg-gray-500 hover:bg-gray-800 focus:ring-2 focus:outline-none focus:ring-gray-400 font-medium rounded-lg text-sm px-4 py-2"
-                        id="randomButton">Random</button>
+                        class="text-white ml-2 bg-orange-500 hover:bg-orange-800 focus:ring-2 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2"
+                        onclick="searchPal()">Search</button>
+                    <button type="button" onclick="randompal()"
+                        class="text-white ml-2 bg-red-500 hover:bg-red-800 focus:ring-2 focus:outline-none focus:ring-red-400 font-medium rounded-lg text-sm px-4 py-2"
+                        id="randomButton">Surprise</button>
                 </div>
             </form>
+
         </div>
 
         <div class="mx-auto mt-16 headline">
@@ -61,6 +63,7 @@
     </main>
     <script src="/js/paldex.js"></script>
     <script src="/js/scroll-reveal.js"></script>
+    <script src="/js/palsearch.js"></script>
 </body>
 
 </html>

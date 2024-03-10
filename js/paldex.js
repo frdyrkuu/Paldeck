@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Get the total number of items in the array
             numPals = data.length;
-            console.log(allPals);
-            console.log(numPals);
+            // console.log(allPals);
+            // console.log(numPals);
 
             displayPals();
 
@@ -86,3 +86,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+

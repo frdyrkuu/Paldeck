@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayDetails() {
         // Retrieve parameters from the URL
         const params = new URLSearchParams(window.location.search);
-        const name = params.get('name');
+        // const name = params.get('name');
         const id = params.get('id');
 
         const palID = document.getElementById('palID');
         const palname = document.getElementById('palname');
-        palname.textContent = name;
+
         palID.textContent = `#${id}`;
 
         fetch(url)
@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (selectedPal) {
                     console.log(selectedPal);
+
+                    palname.textContent = selectedPal.name;
+
                     palImage.src = `${baseUrl}/${selectedPal.image}`;
                     palDesc.textContent = selectedPal.description;
 
@@ -91,6 +94,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
 
+                    // skills
+                    const skills = selectedPal.skills;
+
+                    if (Array.isArray(skills) && skills.length > 0) {
+                        const contentSkill = skills.map((item, index) => {
+                            // const cleanedType = item.name.replace(/_/g, ' ');
+                            return `
+                                <div class="flex gap-7 mt-3 font-[800] text-white">
+                                <h1>Level : ${item.level}</h1>
+                                <h2 class="tracking-widest capitalize">${item.name.replace(/_/g, ' ')}</h2>
+                                <h3 class="capitalize">Type : ${item.type}</h3>
+                                <h4>Power : ${item.power}</h4>
+                                </div>`;
+                        }).join('\n');
+
+                        // typeContent.innerHTML = contentSkill;
+                        const skillContent = document.getElementById('skillContent');
+                        skillContent.innerHTML = contentSkill;
+                        console.log(contentSkill);
+
+
+                    } else {
+                        console.error(`Pal with id ${desiredId} has no type data.`);
+                    }
+
+
                 } else {
                     console.error('Pal not found with the given ID.');
                 }
@@ -99,4 +128,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Error fetching the JSON file:', error);
             });
     }
+
 });

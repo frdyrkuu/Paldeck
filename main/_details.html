@@ -27,12 +27,12 @@
     <main class="mx-auto max-w-7xl justify-center py-10">
         <section class="">
             <div class="text-center flex items-center justify-center py-4">
-                <div class="flex items-center  justify-center mx-auto gap-4 reveal-left mb-4">
+                <div class="flex items-center justify-center mx-auto gap-4 reveal-left mb-4">
                     <div>
-                        <h1 class="font-[900] text-6xl text-gray-800" id="palname"></h1>
+                        <h1 class="font-[900] md:text-6xl text-3xl text-gray-800" id="palname"></h1>
                     </div>
                     <div>
-                        <h2 class="text-3xl font-semibold text-gray-500" id="palID"></h2>
+                        <h2 class="md:text-3xl text-xl font-semibold text-gray-500" id="palID"></h2>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                 <div
                     class="flex flex-col px-4 items-center justify-center mt-10 text-white hover:-translate-y-2 duration-100 transition ease-out">
                     <div
-                        class="stats w-full h-96 rounded-xl px-4 p-3 hover:shadow-xl shadow duration-500 transition ease-out reveal-bottom">
+                        class="stats w-full pb-10 pt-4 rounded-xl px-4 hover:shadow-xl shadow duration-500 transition ease-out reveal-bottom">
                         <h1 class="px-4 text-2xl font-bold">Stats</h1>
 
                         <div class="px-4 mt-3">
@@ -80,43 +80,35 @@
                         <div class="px-4 mt-3 flex flex-row items-center gap-2">
                             <h1 class="font-[800] text-xl" title="Melee">Attack</h1>
                         </div>
-                        <div class="grid grid-cols-2 content-between w-1/2">
+                        <div class="flex">
                             <div class="px-4 mt-3 flex flex-row items-center gap-2">
-                                <svg fill="#ffffff" width="30px" height="30px" viewBox="0 0 256 256" id="Flat"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M221.65723,34.34326A8.00246,8.00246,0,0,0,216,32h-.02539l-63.79883.20117A8.00073,8.00073,0,0,0,146.0332,35.106L75.637,120.32275,67.31348,111.999A16.02162,16.02162,0,0,0,44.68555,112L32.001,124.68555A15.99888,15.99888,0,0,0,32,147.31348l20.88672,20.88769L22.94531,198.14258a16.01777,16.01777,0,0,0,.001,22.62695l12.28418,12.28418a16.00007,16.00007,0,0,0,22.62793,0L87.79883,203.1123,108.68652,224.001A16.02251,16.02251,0,0,0,131.31445,224L143.999,211.31445A15.99888,15.99888,0,0,0,144,188.68652l-8.32324-8.32324,85.21679-70.39648a8.00125,8.00125,0,0,0,2.90528-6.14258L224,40.02539A8.001,8.001,0,0,0,221.65723,34.34326Zm-13.84668,65.67822-83.49829,68.97706L111.314,156l54.34327-54.34277a8.00053,8.00053,0,0,0-11.31446-11.31446L100,144.686,87.00195,131.6875,155.97852,48.189l51.99609-.16357Z" />
+                                <!-- svg sword -->
+                                <svg width="30px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                    fill="#ffffff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill-rule="nonzero"
+                                                d="M7.05 13.406l3.534 3.536-1.413 1.414 1.415 1.415-1.414 1.414-2.475-2.475-2.829 2.829-1.414-1.414 2.829-2.83-2.475-2.474 1.414-1.414 1.414 1.413 1.413-1.414zM3 3l3.546.003 11.817 11.818 1.415-1.414 1.414 1.414-2.474 2.475 2.828 2.829-1.414 1.414-2.829-2.829-2.475 2.475-1.414-1.414 1.414-1.415L3.003 6.531 3 3zm14.457 0L21 3.003l.002 3.523-4.053 4.052-3.536-3.535L17.457 3z">
+                                            </path>
+                                        </g>
+                                    </g>
                                 </svg>
                                 <h1 class="font-[900] text-2xl" title="Melee" id="melee">60</h1>
                             </div>
 
-                            <div class="px-4 mt-3 flex flex-row items-center gap-2">
-                                <svg fill="#ffffff" height="30px" width="30px" version="1.1" id="Capa_1"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="0 0 389.655 389.655" xml:space="preserve">
-                                    <g>
-                                        <g id="Layer_1_98_">
-                                            <path d="M388.515,252.217c-4.912-25.445-25.027-42.371-39.73-52.889c-17.416-12.459-35.137-24.754-52.676-36.547
-			c-11.732-7.889-23.713-15.848-36.414-24.189l50.488-50.486l7.988,7.988c1.193,1.193,2.951,1.623,4.563,1.119
-			c0.709-0.225,1.336-0.611,1.844-1.119c0.643-0.643,1.092-1.477,1.258-2.406l5.352-29.979c0.26-1.461-0.209-2.951-1.256-4
-			c-1.047-1.047-2.541-1.518-4-1.258l-29.98,5.354c-1.66,0.295-3.02,1.492-3.523,3.102c-0.506,1.609-0.076,3.367,1.117,4.561
-			l7.99,7.99l-50.951,50.949c-7.57-11.686-13.959-21.455-19.895-30.426c-12.785-19.33-26.641-39.605-41.182-60.262
-			C176.094,20.66,161.779,8.754,145.752,3.315c-27.633-9.373-54.238,3.154-74.33,15.115c-6.461,3.846-12.861,7.951-19.053,11.922
-			C36.137,40.766,20.803,50.6,3.277,57.028c-2.271,0.834-3.621,3.174-3.201,5.561c0.42,2.385,2.484,4.125,4.906,4.133
-			c0.021,0,0.045,0,0.066,0l154.611,154.611l-28.084,28.084l-10.324,1.512c-0.631,0.092-1.23,0.338-1.742,0.719l-24.625,18.217
-			c-1.377,1.014-1.916,2.809-1.344,4.414c0.572,1.607,2.129,2.65,3.832,2.568l16.191-0.771l-0.771,16.191
-			c-0.08,1.703,0.963,3.26,2.568,3.832c1.424,0.508,2.994,0.137,4.039-0.908c0.133-0.133,0.26-0.279,0.375-0.436l18.219-24.623
-			c0.379-0.514,0.625-1.113,0.717-1.742l1.514-10.324l28.084-28.084l154.635,154.635v0.004c0.004,2.424,1.746,4.496,4.133,4.918
-			c1.65,0.291,3.281-0.266,4.406-1.391c0.5-0.5,0.9-1.115,1.158-1.816c6.637-18.143,17.346-34.807,27.703-50.92
-			c2.916-4.537,5.932-9.227,8.826-13.902C381.503,301.584,393.448,277.769,388.515,252.217z M164.608,216.381L14.515,66.287
-			c19.367-1.744,37.547-8.629,55.207-15.33c8.58-3.258,17.453-6.627,26.191-9.273c13.332-4.037,27.176-6.746,38.113,0.719
-			c7.273,4.961,12.355,12.648,16.912,20.16c0.033,0.064,0.068,0.129,0.104,0.191c1.521,2.643,3.063,5.275,4.604,7.906l0.682,1.164
-			c16.434,28.098,33.938,56.723,53.506,87.516c0.367,0.576,0.869,1.506,1.398,2.488c0.895,1.654,1.848,3.41,2.92,5.012
-			L164.608,216.381z M351.973,274.51c-0.738,11.27-4.838,22.488-8.803,33.336l-0.309,0.848c-1.293,3.539-2.633,7.088-3.979,10.652
-			c-6.766,17.91-13.727,36.357-15.488,55.824L173.257,225.029l50.348-50.348l6.934,4.469c7.336,4.729,14.82,9.479,22.057,14.072
-			l1.35,0.855c12.197,7.744,24.387,15.227,35.742,22.16c10.248,6.256,20.73,12.547,31.156,18.697l2.078,1.221
-			c6.363,3.736,12.377,7.264,17.545,11.824C348.856,255.594,352.62,264.275,351.973,274.51z" />
-                                        </g>
+                            <div class="px-4 mt-3 flex flex-row  items-center gap-2">
+                                <!-- svg range -->
+                                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M23.9806 1.19613C24.0462 0.868272 23.9436 0.529333 23.7071 0.292909C23.4707 0.056486 23.1318 -0.0461365 22.8039 0.0194355L17.8039 1.01944C17.2624 1.12775 16.9111 1.65457 17.0194 2.19613C17.1278 2.73769 17.6546 3.08891 18.1961 2.9806L19.9575 2.62832L16.8761 5.70976C14.2376 3.39988 10.7823 2.00002 7.00003 2.00002H1.00003C0.447744 2.00002 2.91966e-05 2.44773 2.91966e-05 3.00002C2.91966e-05 3.5523 0.447744 4.00002 1.00003 4.00002C1.00003 4.25594 1.09766 4.51186 1.29292 4.70712L9.58582 13L8.58582 14H5.00003C4.73481 14 4.48046 14.1054 4.29292 14.2929L0.292922 18.2929C0.00692444 18.5789 -0.0786313 19.009 0.0761497 19.3827C0.230931 19.7564 0.595567 20 1.00003 20H4.00003V23C4.00003 23.4045 4.24367 23.7691 4.61735 23.9239C4.99102 24.0787 5.42114 23.9931 5.70714 23.7071L9.70714 19.7071C9.89467 19.5196 10 19.2652 10 19V15.4142L11 14.4142L19.2929 22.7071C19.4882 22.9024 19.7441 23 20 23C20 23.5523 20.4477 24 21 24C21.5523 24 22 23.5523 22 23V17C22 13.2178 20.6002 9.76247 18.2903 7.12397L21.3717 4.04254L21.0194 5.8039C20.9111 6.34546 21.2624 6.87228 21.8039 6.9806C22.3455 7.08891 22.8723 6.73769 22.9806 6.19613L23.9806 1.19613ZM15.4582 7.12759C13.1847 5.17792 10.2299 4.00002 7.00003 4.00002H3.41424L11 11.5858L15.4582 7.12759ZM12.4142 13L16.8725 8.5418C18.8221 10.8153 20 13.7701 20 17V20.5858L12.4142 13ZM5.41424 16H6.58582L4.58581 18H3.41424L5.41424 16ZM8.00003 18.5858L6.00003 20.5858V19.4142L8.00003 17.4142V18.5858Z"
+                                            fill="#ffffff"></path>
                                     </g>
                                 </svg>
                                 <h1 class="font-[900] text-2xl" title="Range" id="range">60</h1>
@@ -125,7 +117,7 @@
                         <!-- END ATTACK -->
 
                         <!-- DEFENSE -->
-                        <div class="grid md:grid-cols-4 grid-cols-2 gap-2">
+                        <div class="grid md:grid-cols-4 grid-cols-2 gap-2 mt-4">
                             <div class="px-4 mt-3 flex flex-col gap-2">
                                 <div class="flex-col gap-2">
                                     <div>
@@ -225,10 +217,10 @@
                 <div
                     class="flex flex-col px-4 items-center justify-center mt-10 hover:-translate-y-2 duration-100 transition ease-out">
                     <div
-                        class="bg-gray-400 w-full h-96 rounded-xl px-4 p-3 hover:shadow-xl shadow duration-500 transition ease-out reveal-bottom">
+                        class="stats w-full pb-5 pt-4 rounded-xl px-4 hover:shadow-xl shadow duration-500 transition ease-out reveal-bottom">
                         <h1 class="px-4 text-2xl font-bold text-white">Skills</h1>
-                        <div>
-                            <div>
+                        <div class="px-4 mt-5" id="skillContent">
+                            <div class="flex gap-5 font-[800] text-white">
 
                             </div>
                         </div>
@@ -263,7 +255,8 @@
 
                 <nav>
                     <ul>
-                        <li><a href="https://fredericksocorin.netlify.app/" target="_blank" class="text-vanilla hover:text-gray-300">Hire Me</a></li>
+                        <li><a href="https://fredericksocorin.netlify.app/" target="_blank"
+                                class="text-vanilla hover:text-gray-300">Hire Me</a></li>
                     </ul>
                 </nav>
             </div>
