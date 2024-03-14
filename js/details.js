@@ -29,8 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const title = document.querySelector('title');
         const palLink = document.querySelector('link');
 
-        title.textContent = `${paramName}` ;
-
         palID.textContent = `#${id}`;
 
         fetch(url)
@@ -49,6 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     // console.log(selectedPal);
                 
                     palLink.href = `${baseUrl}/${selectedPal.image}`;
+
+                    title.textContent = `${selectedPal.name}` ;
 
                     palname.textContent = selectedPal.name;
 
