@@ -22,9 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const params = new URLSearchParams(window.location.search);
         // const name = params.get('name');
         const id = params.get('id');
-
+        const paramName = params.get('name');
+        
         const palID = document.getElementById('palID');
         const palname = document.getElementById('palname');
+        const title = document.querySelector('title');
+        const palLink = document.querySelector('link');
+
+        title.textContent = `${paramName}` ;
 
         palID.textContent = `#${id}`;
 
@@ -41,7 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const selectedPal = allPals.find(pal => pal.id === parseInt(id, 10));
 
                 if (selectedPal) {
-                    console.log(selectedPal);
+                    // console.log(selectedPal);
+                
+                    palLink.href = `${baseUrl}/${selectedPal.image}`;
 
                     palname.textContent = selectedPal.name;
 
