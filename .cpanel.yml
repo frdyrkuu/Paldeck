@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/xlysnthw/public_html/paldex.acs-protech.com
+    - /bin/cp index.html $DEPLOYPATH
